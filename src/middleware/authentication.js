@@ -10,6 +10,7 @@ function checkIfAuthenticated(req, res, next) {
       req.user = data;
       next();
       // verify here
+      
     }
     else {
       res.status(401).send('Please login before accessing the API');
