@@ -1,0 +1,23 @@
+db.users.find({ "courses": { $all: [2, 4] } });
+db.users.find({ "courses": { $in: [2, 4] } });
+
+db.users.find({ $and": [ { "courses": { $elemMatch: { $or: [ { $eq: 2 }, { $eq: 3 }, { $eq: 4 } ] } } },
+                          { "courses": { $size: 3 } }
+                       ]
+              });
+
+db.users.find({ "email": "@gmail.com" });
+db.users.find({ "email": { $regex: "^a*" }});
+
+{
+  "name": "Pratik",
+  "courses": [10, 12]
+}
+{
+  "name": "Avinash",
+  "courses": [5, 6]
+}
+{
+  "name": "Yashank",
+  "courses": [2, 3, 4, 7]
+}

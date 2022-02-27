@@ -20,8 +20,8 @@ app.use('/movie', MovieRoutes);
 
 let username = process.env.MONGO_USERNAME;
 let password = process.env.MONGO_PASSWORD;
-let clusterUrl = 'cluster0.qvteq.mongodb.net';
-let dbName = 'test';
+let clusterUrl = 'cluster0.70gtj.mongodb.net';
+let dbName = 'sample_mflix';
 let dbUrl = `mongodb+srv://${username}:${password}@${clusterUrl}/${dbName}`;
 
 console.log(`username = ${username}`);
